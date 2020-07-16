@@ -3,4 +3,49 @@
   height: 50vh;
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSxby1XXKR_nXXKt-MAx-FVrk0uEYU6D16eVg&usqp=CAU');
 }
-talk page
+</style>
+<div class="jumbotron">
+  <div class="container">
+      Nothing Compares to a Beautiful Conversation with a Beautiful Mind...!!
+  </div>
+</div>
+<br><Br><br><br>
+
+<section id = "gallery">
+    <div class = "container">
+        <div class="row">
+          <%(1 ... 8).to_a.each do |num|%>
+            <div class = "col-lg-4 col-md-6 mb-3">
+                <div class="card">
+                    <div class="container">
+                      <%= image_tag ("t#{num}.png"), class: 'card-img-top'%>
+                      <div class="centered icon">
+                        <div class="span none icon" id = "l<%=num%>">
+                          <% (0 .. 24).to_a.each do |a|%>
+                          <i class="fa fa-heart" aria-hidden="true"></i>
+                          <%end%>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">First Thing</h5>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam hic rem assumenda, eligendi qui pariatur! Dolorem, error doloribus.</p>
+                        <button class="btn btn-outline-danger btn-md" onclick="myFunction(<%=num%>)">  <i class="fa fa-heart"  aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+          <%end%>
+        </div>
+    </div>
+</section>
+
+<script>
+function myFunction(num) {
+  var x = document.getElementById("l"+num.toString());
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>

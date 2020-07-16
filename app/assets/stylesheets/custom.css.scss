@@ -101,13 +101,13 @@ body {
 
 /* Media qurey section */
 
-@media screen and (min-width: 968px) and (max-width: 1024px) {
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
     .container {
         margin: 0;
     }
 }
 
-@media screen and (max-width:968px) {
+@media screen and (max-width:1000px) {
     .navTrigger {
         display: block;
     }
@@ -491,4 +491,18 @@ body {
       color: black;}
   100% {background-color: black;
       color: white;}
+}
+
+
+/*--------------------------------TALK----------------------------------*/
+.jumbotron .container{
+  font-size: 3rem;
+  font-weight: lighter;
+}
+.icon{
+  color: red;
+  font-size: 3 rem;
+}
+.none{
+  display: none;
 }
