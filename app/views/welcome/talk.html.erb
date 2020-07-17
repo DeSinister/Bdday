@@ -14,8 +14,8 @@
 <section id = "gallery">
     <div class = "container">
         <div class="row">
-          <%(1 ... 8).to_a.each do |num|%>
-            <div class = "col-lg-4 col-md-6 mb-3">
+          <%(1 ... 9).to_a.each do |num|%>
+            <div class = "col-lg-4 mb-3">
                 <div class="card">
                     <div class="container">
                       <%= image_tag ("t#{num}.png"), class: 'card-img-top'%>
@@ -29,7 +29,6 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">First Thing</h5>
-                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam hic rem assumenda, eligendi qui pariatur! Dolorem, error doloribus.</p>
                         <button class="btn btn-outline-danger btn-md" onclick="myFunction(<%=num%>)">  <i class="fa fa-heart"  aria-hidden="true"></i></button>
                     </div>
                 </div>

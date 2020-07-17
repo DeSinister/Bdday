@@ -1,0 +1,51 @@
+<style>
+.home{
+  height: 50vh;
+  background-image: url('https://www.wallpaperflare.com/static/690/958/533/abstract-digital-art-black-background-halftone-pattern-wallpaper.jpg');
+}
+</style>
+
+<div class="jumbotron">
+  <div class="container">
+      Art Speaks where Words are Unable to Explain...!!
+  </div>
+</div>
+<br><Br><br><br>
+
+  <section id = "gallery">
+      <div class = "container">
+          <div class="row">
+            <%(1 ... 5).to_a.each do |num|%>
+              <div class = "col-lg-4 mb-3">
+                  <div class="card">
+                      <div class="container">
+                        <%= image_tag ("k#{num}.jpg"), class: 'card-img-top', height: '400px;', width: '200px'%>
+                        <div class="centered icon">
+                          <div class="span none icon" id = "l<%=num%>">
+                            <% (0 .. 24).to_a.each do |a|%>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                            <%end%>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">First Thing</h5>
+                          <button class="btn btn-outline-danger btn-md" onclick="myFunction(<%=num%>)">  <i class="fa fa-heart"  aria-hidden="true"></i></button>
+                      </div>
+                  </div>
+              </div>
+            <%end%>
+          </div>
+      </div>
+  </section>
+
+  <script>
+  function myFunction(num) {
+    var x = document.getElementById("l"+num.toString());
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script>
