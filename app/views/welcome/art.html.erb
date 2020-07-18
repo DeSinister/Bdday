@@ -3,6 +3,10 @@
   height: 50vh;
   background-image: url('https://www.wallpaperflare.com/static/690/958/533/abstract-digital-art-black-background-halftone-pattern-wallpaper.jpg');
 }
+
+body{
+  background-image: url('https://m.media-amazon.com/images/I/81Kz-RE5OjL._SR500,500_.jpg')
+}
 </style>
 
 <div class="jumbotron">
@@ -15,26 +19,45 @@
   <section id = "gallery">
       <div class = "container">
           <div class="row">
-            <%(1 ... 5).to_a.each do |num|%>
+
               <div class = "col-lg-4 mb-3">
                   <div class="card">
                       <div class="container">
-                        <%= image_tag ("k#{num}.jpg"), class: 'card-img-top', height: '400px;', width: '200px'%>
+                        <%= image_tag ("k1.jpg"), class: 'card-img-top img-set'%>
                         <div class="centered icon">
-                          <div class="span none icon" id = "l<%=num%>">
-                            <% (0 .. 24).to_a.each do |a|%>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
+                          <div class="span none icon" id = "l1">
+                            <% (0 .. 6).to_a.each do |a|%>
+                            <i class="fa fa-heart big" aria-hidden="true"></i>
                             <%end%>
                           </div>
                         </div>
                       </div>
                       <div class="card-body">
                           <h5 class="card-title">First Thing</h5>
-                          <button class="btn btn-outline-danger btn-md" onclick="myFunction(<%=num%>)">  <i class="fa fa-heart"  aria-hidden="true"></i></button>
+                          <button class="btn btn-outline-danger btn-md" onclick="myFunction(1)">  <i class="fa fa-heart med"  aria-hidden="true"></i></button>
                       </div>
                   </div>
               </div>
-            <%end%>
+
+              <div class = "col-lg-4 mb-3">
+                  <div class="card">
+                      <div class="container">
+                        <%= image_tag ("k2.jpg"), class: 'card-img-top img-set'%>
+                        <div class="centered icon">
+                          <div class="span none icon" id = "l2">
+                            <% (0 .. 6).to_a.each do |a|%>
+                            <i class="fa fa-heart big" aria-hidden="true"></i>
+                            <%end%>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">First Thing</h5>
+                          <button class="btn btn-outline-danger btn-md" onclick="myFunction(2)">  <i class="fa fa-heart med"  aria-hidden="true"></i></button>
+                      </div>
+                  </div>
+              </div>
+
           </div>
       </div>
   </section>

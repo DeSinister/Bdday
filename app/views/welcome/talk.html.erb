@@ -3,6 +3,9 @@
   height: 50vh;
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSxby1XXKR_nXXKt-MAx-FVrk0uEYU6D16eVg&usqp=CAU');
 }
+body{
+  background-image: url('https://previews.123rf.com/images/nailaz/nailaz1712/nailaz171200274/92309891-damask-black-white-seamless-pattern-floral-background-wallpaper-illustration-with-vintage-antique-fl.jpg')
+}
 </style>
 <div class="jumbotron">
   <div class="container">
@@ -15,21 +18,21 @@
     <div class = "container">
         <div class="row">
           <%(1 ... 9).to_a.each do |num|%>
-            <div class = "col-lg-4 mb-3">
+            <div class = "col-lg-6 mb-3">
                 <div class="card">
                     <div class="container">
                       <%= image_tag ("t#{num}.png"), class: 'card-img-top'%>
                       <div class="centered icon">
                         <div class="span none icon" id = "l<%=num%>">
-                          <% (0 .. 24).to_a.each do |a|%>
-                          <i class="fa fa-heart" aria-hidden="true"></i>
+                          <% (0 .. 21).to_a.each do |a|%>
+                          <i class="fa fa-heart med" aria-hidden="true"></i>
                           <%end%>
                         </div>
                       </div>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">First Thing</h5>
-                        <button class="btn btn-outline-danger btn-md" onclick="myFunction(<%=num%>)">  <i class="fa fa-heart"  aria-hidden="true"></i></button>
+                        <button class="btn btn-outline-danger btn-md" onclick="myFunction(<%=num%>)">  <i class="fa fa-heart med"  aria-hidden="true"></i></button>
                     </div>
                 </div>
             </div>

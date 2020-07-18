@@ -506,7 +506,12 @@ body {
 .none{
   display: none;
 }
-
+.big{
+  font-size: 4rem !important;
+}
+.med{
+  font-size: 2rem !important
+}
 /*--------------------------------ABOUT-------------------------------*/
 #abt{
   font-size: 4rem;
@@ -517,4 +522,14 @@ body {
 .bla{
   background: black;
   padding: 20px;
+}
+.mrl{
+  padding-left: 110px;
+  padding-right: 110px;
+   height: 500px;
+   width: 400px
+}
+/*--------------------------------ART-------------------------------*/
+.img-set{
+border: 5px solid brown;
 }
